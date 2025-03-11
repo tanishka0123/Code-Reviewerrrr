@@ -1,0 +1,136 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #1e1e2f;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  padding-top: 12px;
+  color: #dcdcdc;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+/* Main Layout */
+main {
+  height: 93%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Left & Right Panels */
+main .left, main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+/* Left Panel - Code Editor */
+main .left {
+  background-color: #111827;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+/* Code Styling */
+.left .code {
+  height: 100%;
+  overflow: auto;
+}
+
+/* Review Button */
+main .left .btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: #fff;
+  padding: 0.6rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Hover Effect */
+main .left .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid #9333ea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Right Panel - Output */
+main .right {
+  background-color: #252836;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #e5e7eb;
+  line-height: 1.5;
+  border: 1px solid #44475a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 0.7rem;
+  overflow-y: auto;
+}
+
+/* Placeholder Text */
+main .right p {
+  color: #a1a1aa;
+  font-style: italic;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e3e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

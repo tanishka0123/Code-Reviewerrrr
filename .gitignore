@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+
+# Environment Variables
+.env
+backend/.env
+frontend/.env
+
+# Build
+dist/
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Dependency directories
+backend/node_modules/
+frontend/node_modules/
